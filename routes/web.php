@@ -21,7 +21,12 @@ Route::get('/', function () {
 
     $arrayDetails = config('comicsUtilities');
 
-    return view('pages.comics', compact('arrayComics', 'arrayDetails'));
+    $dcComicsLinks = ['Characters','Comics', 'Movies','TV','Games', 'Videos', 'News'];
+    $shopLinks = ['Shop DC', 'Shop DC Collectibles'];
+    $dcLinks = ['Terms Of Use', 'Privacy Policy (New)', 'Add Choices', 'Advertising', 'Jobs', 'Subscription', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us'];
+    $sitesLinks = ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa'];
+
+    return view('pages.comics', compact('arrayComics', 'arrayDetails', 'dcComicsLinks', 'shopLinks', 'dcLinks', 'sitesLinks'));
 });
 
 Route::get('/comic', function () {

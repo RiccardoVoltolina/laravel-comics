@@ -22,6 +22,8 @@
     @include('partials.hero')
 
     @yield('main_content')
+
+    @include('partials.footerTop')
 </body>
 
 </html>
