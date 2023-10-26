@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layout.app');
 });
+
+
+Route::get('/', function () {
+    $header_links = ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS' ];
+    return view('partials.header', compact('header_links'));
+});
+
