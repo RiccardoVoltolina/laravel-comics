@@ -38,7 +38,7 @@
                     @foreach ($arrayDetails as $detail)
 
                     <img src="{{ Vite::asset($detail['img']) }}" alt="">
-                    <a class="ps-3">{{ $detail['utilitiesInfo'] }}</a>
+                    <a class="pe-3">{{ $detail['utilitiesInfo'] }}</a>
                     @endforeach
 
                 </div>
@@ -89,6 +89,7 @@
     .details img {
         width: 50px;
         height: 50px;
+        object-fit: contain;
     }
 </style>
 

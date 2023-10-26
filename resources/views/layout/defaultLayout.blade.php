@@ -24,6 +24,7 @@
     @yield('main_content')
 
     @include('partials.footerTop')
+    @include('partials.footerBottom')
 </body>
 
 </html>
