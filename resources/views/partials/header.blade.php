@@ -1,16 +1,27 @@
+<?php
+$header_links = ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS'];
+
+?>
+
+
+
 <header>
     <div class="container w-75 pt-4">
         <div class="row">
-            <div class="col-4 pb-4">
-                <img src="../../images/dc-logo.png" alt="">
+            <div class="col-3 pb-4">
+                <img src="{{ Vite::asset('resources/images/dc-logo.png') }}">
             </div>
-            <div class="col-8 d-flex justify-content-between align-items-center">
+            <div class="col-6 d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center h-100">
                     @foreach ($header_links as $link)
 
-                    <a href="">{{ $link }}</a>
+                    <a href="" class="pe-2">{{ $link }}</a>
                     @endforeach
                 </div>
+                <div class="col-3 d-flex justify-content-end">
+                    <a href="">Search</a>
+                </div>
+
 
             </div>
 
@@ -20,8 +31,7 @@
 </header>
 
 <style>
-
-img {
+    img {
         height: 90px;
         width: 90px;
     }
@@ -31,7 +41,6 @@ img {
         color: black;
         align-items: center;
         display: flex;
-        height: 100%;
     }
 
     a:hover {
@@ -40,8 +49,4 @@ img {
         color: #0282f9;
 
     }
-
-
-  
-
 </style>

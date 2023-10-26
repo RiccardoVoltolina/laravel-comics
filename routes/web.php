@@ -14,12 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.app');
+    return view('pages.comics');
+});
+
+Route::get('/comic', function () {
+    return view('pages.comicDetail');
 });
 
 
-Route::get('/', function () {
-    $header_links = ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS' ];
-    return view('partials.header', compact('header_links'));
-});
+
+
+
 
